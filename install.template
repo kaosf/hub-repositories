@@ -1,0 +1,19 @@
+#!/bin/bash
+
+PREFIX=/usr/local
+PROFILE=/etc/profile
+
+cp hub-repositories $PREFIX/bin
+
+grep DEFAULT_HUB= $PROFILE > /dev/null && exit 0
+cat <<EOS >> $PROFILE
+DEFAULT_HUB=\`which hub\`
+hub() {
+  if [ x\${1} = xrepositories ]
+  then
+    hub-repositories
+  else
+    \$DEFAULT_HUB \$@
+  fi
+}
+EOS
