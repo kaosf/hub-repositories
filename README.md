@@ -13,4 +13,4 @@ chmod +x install
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright 2014 ka
+Copyright &copy; 2014 ka
