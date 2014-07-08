@@ -5,12 +5,9 @@ Add the `repositories` sub command to [hub](https://github.com/github/hub).
 ## Installation
 
 ```bash
-sed 's|PREFIX=/usr/local|PREFIX=$HOME/local|' install.template | \
-sed 's|PROFILE=/etc/profile|PROFILE=$HOME/.zshenv|' > install && \
-chmod +x install
-# or other commands as you like
-
-./install
+./configure --prefix=$HOME/local
+make
+make install
 ```
 
 ## Usage
