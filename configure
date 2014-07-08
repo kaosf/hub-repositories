@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if ! which make > /dev/null 2>&1
+then
+  echo "\"make\" command not found." >&2
+  exit 1
+fi
+if ! which ruby > /dev/null 2>&1
+then
+  echo "Ruby is not installed." >&2
+  exit 1
+fi
+if ! which hub > /dev/null 2>&1
+then
+  echo "\"hub\" is not installed." >&2
+  exit 1
+fi
+
+PREFIX=/usr/local
+if [[ $1 == --prefix=* ]]
+then
+  PREFIX=`echo $1 | sed 's/--prefix=//'`
+fi
+sed "s|PREFIX=|PREFIX=${PREFIX}|" Makefile.in > Makefile
