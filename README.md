@@ -1,6 +1,6 @@
 # hub repositories sub command
 
-Add the `repositories` sub command to [hub](https://github.com/github/hub).
+Add `repositories` sub command to [hub](https://github.com/github/hub).
 
 ## Installation
 
