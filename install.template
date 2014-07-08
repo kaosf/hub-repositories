@@ -9,7 +9,7 @@ grep DEFAULT_HUB= $PROFILE > /dev/null && exit 0
 cat <<EOS >> $PROFILE
 DEFAULT_HUB=\`which hub\`
 hub() {
-  if [ x\${1} = xrepositories ]
+  if [[ \${1} = repositories ]]
   then
     shift
     hub-repositories \$@
