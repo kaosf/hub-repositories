@@ -13,3 +13,6 @@ uninstall:
 
 clean:
 	rm -f profile
+
+distclean: clean
+	rm -f Makefile
