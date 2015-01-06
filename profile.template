@@ -2,7 +2,7 @@
 # Paste following code to your .profile, .bash_profile or etc.
 ################################################################################
 DEFAULT_HUB=
-hub() {
+hub () {
   if [[ $1 = repositories ]]
   then
     shift
