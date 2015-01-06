@@ -5,7 +5,7 @@ all:
 install: all
 	mkdir -p $(PREFIX)/bin
 	cp hub-repositories $(PREFIX)/bin
-	sed 's|DEFAULT_HUB=|DEFAULT_HUB=$(shell which hub)|g' profile.template > profile
+	sed 's|DEFAULT_HUB|$(shell which hub)|g' profile.template > profile
 	cat profile
 
 uninstall:
